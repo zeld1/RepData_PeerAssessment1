@@ -157,7 +157,9 @@ To anwswer this last question, I will calculate the mean number of steps for eac
 # Which days are weekend
 WE <- c("Saturday", "Sunday")
 
-# Create a new factor variable based on the date : If the day is a weekend day, assign the value "weekend", if the day is a week day assign the value "weekday"
+# Create a new factor variable based on the date : 
+# If the day is a weekend day, assign the value "weekend";
+# If the day is a week day assign the value "weekday".
 activity2[,day := as.factor(ifelse(weekdays(date) %in% WE, "weekend", "weekday"))]
 
 # calculate the mean number of steps for each interval for the weekend days
